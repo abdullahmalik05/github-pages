@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .question {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .answer {
+      display: none;
+      padding: 15px;
+      background-color: #fafafa;
+      border-left: 3px solid #007BFF;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .question:hover {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq">
+    <div class="question" onclick="toggleAnswer(this)">Q1: GitHub kya hai?</div>
+    <div class="answer">GitHub ek platform hai jahan aap apne code ko store, share aur manage kar sakte hain. Yeh Git system par based hai.</div>
+
+    <div class="question" onclick="toggleAnswer(this)">Q2: HTML file kaise banayein?</div>
+    <div class="answer">Aap kisi bhi text editor (jaise Notepad, VS Code) mein `.html` extension ke saath file bana sakte hain.</div>
+
+    <div class="question" onclick="toggleAnswer(this)">Q3: Collaborator kya hota hai GitHub par?</div>
+    <div class="answer">Collaborator wo hota hai jise aapki repository mein changes karne ka access diya gaya hota hai.</div>
+  </div>
+
+  <script>
+    function toggleAnswer(element) {
+      var answer = element.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
